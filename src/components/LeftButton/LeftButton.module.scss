@@ -1,0 +1,62 @@
+.left {
+  padding-bottom: 12px;
+  background-color: rgb(184, 213, 184);
+  width: 170px;
+  height: 150px;
+  border-radius: 10px;
+  h3 {
+    color: whitesmoke;
+    padding: 5px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  p {
+    color: rgb(68, 68, 68);
+    text-align: left;
+    font-size: 17px;
+    padding-left: 10px;
+    font-weight: 700;
+  }
+  .leftInner {
+    border-radius: 7px;
+    background-color: rgb(5, 168, 170);
+    width: inherit;
+  }
+}
+
+.leftInnerFailed {
+  background-color: rgb(188, 65, 43);
+  border-radius: 7px;
+  width: inherit;
+}
+
+.left2 {
+  background-color: rgb(220, 96, 46);
+  padding-bottom: 12px;
+  width: 170px;
+  height: 150px;
+  border-radius: 10px;
+  h3 {
+    color: whitesmoke;
+    padding: 5px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  p {
+    color: rgb(68, 68, 68);
+    text-align: left;
+    font-size: 17px;
+    padding-left: 10px;
+    color: white;
+    font-weight: 700;
+  }
+  .leftInner {
+    border-radius: 7px;
+    background-color: rgb(5, 168, 170);
+    width: inherit;
+  }
+}
+
+span {
+  font-size: 14px;
+}
