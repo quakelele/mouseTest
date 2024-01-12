@@ -5,6 +5,7 @@ import MidButton from '../MidButton/MidButton';
 import RightButton from '../RightButton/RightButton';
 import Titles from '../Titles/Titles';
 import ClickMe from '../ClickMe/ClickMe';
+import Reset from '../Reset/Reset';
 const Header = () => {
 
 
@@ -23,7 +24,7 @@ const Header = () => {
 
 
             </div >
-            <button className={style.resetBtn}>Сброс</button>
+            <Reset/>
         </div>
     )
 }

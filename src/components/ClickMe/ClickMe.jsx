@@ -1,11 +1,12 @@
 import React from 'react'
 import { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch,useSelector } from 'react-redux'
 import { setLeft, setRight, setMidle } from '../../redux/slices/clickSlice'
 import { setTimeDoubleClickRight, setMidleDouble, setTimeDoubleClickLeft, setTimeDoubleClickMid, setRightDouble, setLeftDouble } from '../../redux/slices/doubleClickSlice'
 
 import style from './ClickMe.module.scss'
 const ClickMe = () => {
+    const {intervalLeft,intervalRight,intervalMidle} = useSelector(state=> state.click)
     const [timeLeft, setTimeLeft] = useState(0);
     const [timeRight, setTimeRight] = useState(0);
     const [timeMid, setTimeMid] = useState(0);
@@ -16,7 +17,7 @@ const ClickMe = () => {
         const currentTimeLeft = new Date().getTime();
         const timeDiffLeft = currentTimeLeft - timeLeft;
 
-        if (timeDiffLeft < 49) {
+        if (timeDiffLeft < `${intervalLeft}`) {
             console.log(`Left click at: ${timeDiffLeft} ms`);
             dispatch(setLeftDouble())
             dispatch(setTimeDoubleClickLeft(timeDiffLeft))
@@ -30,7 +31,7 @@ const ClickMe = () => {
             const currentTimeMid = new Date().getTime();
             const timeDiffMid = currentTimeMid - timeMid;
 
-            if (timeDiffMid < 49) {
+            if (timeDiffMid < `${intervalMidle}`) {
                 console.log(`Midle click at: ${timeDiffMid} ms`);
                 dispatch(setMidleDouble())
                 dispatch(setTimeDoubleClickMid(timeDiffMid))
@@ -46,7 +47,7 @@ const ClickMe = () => {
             const currentTimeRight = new Date().getTime();
             const timeDiffRight = currentTimeRight - timeRight;
 
-            if (timeDiffRight < 49) {
+            if (timeDiffRight < `${intervalRight}`) {
                 console.log(`Right click at: ${timeDiffRight} ms`);
                 dispatch(setRightDouble())
                 dispatch(setTimeDoubleClickRight(timeDiffRight))
@@ -54,9 +55,10 @@ const ClickMe = () => {
             setTimeRight(currentTimeRight);
         }
     };
-
+   
     return (
         <>
+          
             <button
                 className={style.clickBtn}
                 onAuxClick={midleClick}

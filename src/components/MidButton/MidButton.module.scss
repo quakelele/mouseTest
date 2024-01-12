@@ -54,3 +54,29 @@
     width: inherit;
   }
 }
+
+.inputz {
+  display: flex;
+  button {
+    background-color: rgb(5, 168, 170);
+    color: white;
+    border-radius: 8px;
+    border: none;
+  }
+  input {
+    border-radius: 10px;
+  }
+}
+
+.inputz2  {
+  display: flex;
+  button {
+    background-color: rgb(220, 96, 46);
+    color: white;
+    border-radius: 8px;
+    border: none;
+  }
+  input {
+    border-radius: 10px;
+  }
+}
