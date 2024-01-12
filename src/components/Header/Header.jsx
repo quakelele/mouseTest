@@ -10,19 +10,21 @@ const Header = () => {
 
     return (
 
-        <div className={style.header}>
-            <Titles />
-            <ClickMe />
-            <div className={style.container__display}>
-                <LeftButton />
-                <MidButton />
-                <RightButton />
-            </div>
+        <div className={style.flexBlock}>
+            <div className={style.header}>
+                <Titles />
+                <ClickMe />
+                <div className={style.container__display}>
+                    <LeftButton />
+                    <MidButton />
+                    <RightButton />
+                </div>
+
+
+
+            </div >
             <button className={style.resetBtn}>Сброс</button>
-
-
-        </div >
-
+        </div>
     )
 }
 

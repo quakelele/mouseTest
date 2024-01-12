@@ -11,7 +11,7 @@ const MidButton = () => {
             </div>
             <p>Все: {midle}</p>
             <p>Двойные: {midleDouble}</p>
-            <p>Интервал: <span>{midleDouble > 0 ? `${timeMid} мс` : `${"OK"}`}</span></p>
+            <p>Интервал: <span>{midleDouble > 0 ? `${timeMid} мс` : `${""}`}</span></p>
         </div>
     )
 }

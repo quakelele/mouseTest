@@ -12,7 +12,7 @@ const LeftButton = () => {
             </div>
             <p>Все: {left}</p>
             <p>Двойные: {leftDouble}</p>
-            <p>Интервал: <span>{leftDouble > 0 ? `${timeLeft} мс` : `${"OK"}`}</span></p>
+            <p>Интервал: <span>{leftDouble > 0 ? `${timeLeft} мс` : `${""}`}</span></p>
 
         </div>
     )
