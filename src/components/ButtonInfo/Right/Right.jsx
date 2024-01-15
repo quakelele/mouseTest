@@ -32,7 +32,6 @@ const Right = () => {
             <h4>Interval: <span>{rightDouble > 0 ? `${timeRight} ms` : `${""}`}</span> </h4>
             <label className={rightDouble > 0 ? s.inputz2 : `${s.inputz}`}>
                 <input
-                    value={input}
                     placeholder='def:25'
                     onChange={(e) => setInput(e.target.value)}
                 />

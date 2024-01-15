@@ -28,7 +28,6 @@ const Scroll = () => {
             <h4>Interval: <span>{midleDouble > 0 ? `${timeMid} ms` : `${""} `}</span> </h4>
             <label className={midleDouble > 0 ? s.inputz2 : `${s.inputz}`}>
                 <input
-                    value={input}
                     placeholder='def:25'
                     onChange={(e) => setInput(e.target.value)}
                 />
