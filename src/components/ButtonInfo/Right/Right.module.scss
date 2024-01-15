@@ -10,6 +10,13 @@
   border-radius: 8px; /* Если нужен скругленный угол */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Параметры тени */
   transition: box-shadow 0.3s ease; /* Анимация изменения тени */
+  @media (max-width: 510px) {
+    font-size: 10px;
+    padding-left:5px;
+    padding-right: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+   }
   span {
     font-weight: 700;
     font-size: 17px;
@@ -24,7 +31,7 @@
     border-radius: 3px;
     margin-left: 5px;
     border: none;
-    box-shadow: 0 3px 4px rgba(0, 0, 0, .3); /* Параметры тени */
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3); /* Параметры тени */
     transition: box-shadow 0.3s ease; /* Анимация изменения тени */
   }
   input {
@@ -34,8 +41,13 @@
     height: 15px;
     font-size: 12px;
     outline: none; /* Убираем обводку при фокусе */
-    box-shadow: 0 3px 4px rgba(0, 0, 0, .3); /* Параметры тени */
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3); /* Параметры тени */
     transition: box-shadow 0.3s ease; /* Анимация изменения тени */
+    @media (max-width: 510px) {
+      font-size: 8px;
+      width: 20px;
+      border-radius: 1px;
+    }
   }
   margin-bottom: 25px;
 }
@@ -48,7 +60,7 @@
     color: white;
     border-radius: 3px;
     border: none;
-    box-shadow: 0 3px 4px rgba(0, 0, 0, .3); /* Параметры тени */
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3); /* Параметры тени */
     transition: box-shadow 0.3s ease; /* Анимация изменения тени */
   }
   margin-bottom: 25px;
@@ -59,7 +71,7 @@
     width: 40px;
     height: 15px;
     font-size: 12px;
-    box-shadow: 0 3px 4px rgba(0, 0, 0, .3); /* Параметры тени */
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3); /* Параметры тени */
     transition: box-shadow 0.3s ease; /* Анимация изменения тени */
   }
 }
