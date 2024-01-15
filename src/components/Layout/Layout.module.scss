@@ -1,40 +1,16 @@
 .wrapper {
   margin: 0 auto;
   text-align: center;
-
 }
 
 .wrapper__inner {
   display: flex;
   flex-direction: row;
-  align-items: center; /* Выравнивание элементов по центру */
-  @media (max-width: 634px) {
-   
-  }
 }
 
-// .rightClickWrapper {
-//   padding-left: 40px;
-//   border-radius: 12px;
-//   flex: 1; /* Равномерное распределение пространства между элементами */
-//   background-color: beige;
-//   text-align: left;
-//   margin-left: 15px; /* Уменьшен отступ для более компактного вида */
-//   margin-bottom: 30px;
-//   background-color: #fff; /* Цвет фона вашего блока */
-//   border-radius: 8px; /* Если нужен скругленный угол */
-//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Параметры тени */
-//   transition: box-shadow 0.3s ease; /* Анимация изменения тени */
-//   span {
-//     font-weight: 700;
-//     font-size: 17px;
-//   }
-// }
+
 .mouseBody {
   width: 40vw;
   height: auto;
   margin: 0 auto;
-}
-
-.leftClickWrapper {
 }

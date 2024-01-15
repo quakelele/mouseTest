@@ -4,31 +4,51 @@ import { useSelector, useDispatch } from 'react-redux'
 import s from './Left.module.scss'
 const Left = () => {
     const dispatch = useDispatch()
-    const { leftDouble, timeLeft } = useSelector(state => state.doubleClick)
-    const [input, setInput] = React.useState('')
-    const { left } = useSelector(state => state.click)
-    const addToState = () => {
-        dispatch(setInputIntervalLeft(input))
 
-    }
+    const { leftDouble, timeLeft } = useSelector(state => state.doubleClick)
+    const [input, setInput] = React.useState(25)
+    const { left } = useSelector(state => state.click)
+    const [showModal, setShowModal] = React.useState(false);
+    const handleClick = () => {
+        setShowModal(true);
+        // Спрятать модальное окно через 3 секунды
+        setTimeout(() => {
+            setShowModal(false);
+        }, 3000);
+        dispatch(setInputIntervalLeft(input));
+    };
+
+
+    React.useEffect(() => {
+        return () => clearTimeout();
+    }, []);
+
+
     return (
-        <div className={s.leftClickWrapper}>
+        <div className={leftDouble > 0 ? s.leftClickWrapper2 : `${s.leftClickWrapper}`}>
             <h4>Left: <span>{left}</span>  </h4>
             <h4>Double: <span>{leftDouble}</span> </h4>
-            <h4>Interval: <span>{leftDouble > 0 ? `${timeLeft}` : `${""}`}</span>ms </h4>
+            <h4>Interval: <span>{leftDouble > 0 ? `${timeLeft} ms` : `${""}`}</span> </h4>
             <label className={leftDouble > 0 ? s.inputz2 : `${s.inputz}`}>
                 <input
-                    value={input}
-                    placeholder='25-150'
+                    placeholder='def:25'
                     onChange={(e) => setInput(e.target.value)}
                 />
-                <button
-                    className={s.addButton}
-                    onClick={addToState}
-                >set interval</button>
+
+                <button className={s.addButton}
+                    onClick={handleClick} > set interval </button>
+
+                {showModal && (
+                    <div className={s.modal}>
+                        <div className={s.modalContent}>
+                            <p><b></b>
+                                {input <= 25 ? "default value is 25 ms.." : <p><b>{input}</b> ms selected</p>}</p>
+                        </div>
+                    </div>
+                )}
                 <div className={s.ebal}>  </div>
             </label>
-        </div>
+        </div >
     )
 }
 

@@ -5,6 +5,7 @@ import { Left } from '../ButtonInfo/Left/Left'
 import { Right } from "../ButtonInfo/Right/Right"
 import { Scroll } from '../ButtonInfo/Scroll/Scroll'
 import { ResetButton } from '../ResetButton/ResetButton'
+
 const Layout = () => {
 
     return (
@@ -17,11 +18,9 @@ const Layout = () => {
                 {/* <ResetButton/> */}
             </div>
             <div className={s.mouseBody}>
-
                 <MouseBody />
-
             </div>
-            <h4>Footer</h4>
+            <h4>Fnatic Boltz </h4><p>(don't buy this shit)</p>
         </div>
     )
 }

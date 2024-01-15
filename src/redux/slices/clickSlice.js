@@ -4,8 +4,6 @@ const initialState = {
   right: 0,
   midle: 0,
   reset: 0,
-  input: "",
-  kado: "",
   inputLeft: "",
   intervalLeft: "",
   intervalLeftJsx: "",
@@ -52,13 +50,6 @@ export const clickSlice = createSlice({
         console.log("intervalMidle:", state.intervalMidle);
       }
     },
-    resetInput(state, action) {
-      state.input = action.payload;
-    },
-    setKado(state, action) {
-      state.kado = action.payload;
-      console.log(action.payload);
-    },
   },
 });
 
@@ -68,8 +59,6 @@ export const {
   setInputIntervalLeft,
   resetAll,
   setMidle,
-  setKado,
-  resetInput,
   setRight,
   setLeft,
 } = clickSlice.actions;

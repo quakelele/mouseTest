@@ -6,7 +6,6 @@ import Layout from "./components/Layout/Layout";
 function App() {
   return (
     <div className={style.App}>
-      {/* <Header /> */}
       <Layout />
     </div>
   );
