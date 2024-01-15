@@ -1,87 +1,31 @@
-.left {
-  padding-bottom: 12px;
-  background-color: rgb(184, 213, 184);
-  width: 170px;
-  height: 150px;
-  border-radius: 10px;
-  h3 {
-    color: whitesmoke;
-    padding: 5px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  p {
-    color: rgb(68, 68, 68);
-    text-align: left;
-    font-size: 17px;
-    padding-left: 10px;
-    font-weight: 700;
-  }
-  .leftInner {
-    border-radius: 7px;
-    background-color: rgb(5, 168, 170);
-    width: inherit;
-  }
+.leftButtonR {
+  position: absolute;
+  top: 21.8%;
+  left: 30.4%;
+  transform: translate(-50%, -50%);
+  width: 43%;
+  height: auto;
+  opacity: .5;
+  cursor: pointer;
+  transition: opacity 0.5s ease; /* добавляем анимацию перехода для свойства opacity */
 }
 
-.leftInnerFailed {
-  background-color: rgb(188, 65, 43);
-  border-radius: 7px;
-  width: inherit;
+.leftButtonR:active {
+  opacity:1; /* устанавливаем новое значение прозрачности при активации (нажатии) */
 }
 
-.left2 {
-  background-color: rgb(220, 96, 46);
-  padding-bottom: 12px;
-  width: 170px;
-  height: 150px;
-  border-radius: 10px;
-  h3 {
-    color: whitesmoke;
-    padding: 5px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  p {
-    color: rgb(68, 68, 68);
-    text-align: left;
-    font-size: 17px;
-    padding-left: 10px;
-    color: white;
-    font-weight: 700;
-  }
-  .leftInner {
-    border-radius: 7px;
-    background-color: rgb(5, 168, 170);
-    width: inherit;
-  }
+.leftButtonW {
+  position: absolute;
+  top: 21.8%;
+  left: 30.4%;
+  transform: translate(-50%, -50%);
+  width: 43%; /* Пример ширины кнопки (установите подходящее значение) */
+  height: auto;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease; /* добавляем анимацию перехода для свойства opacity */
 }
 
-span {
-  font-size: 14px;
-}
-.inputz {
-  display: flex;
-  button {
-    background-color: rgb(5, 168, 170);
-    color: white;
-    border-radius: 8px;
-    border: none;
-  }
-  input {
-    border-radius: 10px;
-  }
-}
-
-.inputz2  {
-  display: flex;
-  button {
-    background-color: rgb(220, 96, 46);
-    color: white;
-    border-radius: 8px;
-    border: none;
-  }
-  input {
-    border-radius: 10px;
-  }
+.leftButtonW:active {
+  opacity:1; /* устанавливаем новое значение прозрачности при активации (нажатии) */
 }

@@ -5,7 +5,10 @@ const initialState = {
   midle: 0,
   reset: 0,
   input: "",
+  kado: "",
+  inputLeft: "",
   intervalLeft: "",
+  intervalLeftJsx: "",
   intervalRight: "",
   intervalMidle: "",
 };
@@ -27,24 +30,34 @@ export const clickSlice = createSlice({
       state.right = 0;
       state.midle = 0;
       state.left = 0;
+      state.input = 0;
     },
     setInputIntervalLeft(state, action) {
-      if (action.payload >= 50 && action.payload <= 200) {
+      if (action.payload > 0 && action.payload < 1001) {
         state.intervalLeft = action.payload;
-        console.log('IntervalLeft:', state.intervalLeft)
+        state.intervalLeftJsx = action.payload;
+        console.log("IntervalLeft:", state.intervalLeft);
       }
     },
     setInputIntervalRight(state, action) {
-      if (action.payload >= 50 && action.payload <= 200) {
+      if (action.payload > 0 && action.payload < 1001) {
         state.intervalRight = action.payload;
-        console.log('intervalRight:', state.intervalRight)
+
+        console.log("intervalRight:", state.intervalRight);
       }
     },
     setInputIntervalMidle(state, action) {
-      if (action.payload >= 50 && action.payload <= 200) {
+      if (action.payload > 0 && action.payload < 1001) {
         state.intervalMidle = action.payload;
-        console.log('intervalMidle:', state.intervalMidle)
+        console.log("intervalMidle:", state.intervalMidle);
       }
+    },
+    resetInput(state, action) {
+      state.input = action.payload;
+    },
+    setKado(state, action) {
+      state.kado = action.payload;
+      console.log(action.payload);
     },
   },
 });
@@ -55,6 +68,8 @@ export const {
   setInputIntervalLeft,
   resetAll,
   setMidle,
+  setKado,
+  resetInput,
   setRight,
   setLeft,
 } = clickSlice.actions;

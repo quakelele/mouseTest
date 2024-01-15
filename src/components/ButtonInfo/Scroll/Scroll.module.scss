@@ -1,0 +1,67 @@
+.midClickWrapper {
+ 
+  padding-right: 20px;
+  padding-left: 40px;
+  border-radius: 12px;
+  flex: 1; /* Равномерное распределение пространства между элементами */
+  background-color: beige;
+  text-align: left;
+  margin-left: 15px; /* Уменьшен отступ для более компактного вида */
+  margin-bottom: 30px;
+  background-color: #fff; /* Цвет фона вашего блока */
+  border-radius: 8px; /* Если нужен скругленный угол */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Параметры тени */
+  transition: box-shadow 0.3s ease; /* Анимация изменения тени */
+  span {
+    font-weight: 700;
+    font-size: 17px;
+  }
+}
+.inputz {
+  display: flex;
+  button {
+    max-width: 100px;
+    background-color: rgb(5, 168, 170);
+    color: white;
+    border-radius: 3px;
+    margin-left: 5px;
+    border: none;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3); /* Параметры тени */
+    transition: box-shadow 0.3s ease; /* Анимация изменения тени */
+  }
+  input {
+    border: 1px solid white;
+    border-radius: 3px;
+    width: 40px;
+    height: 15px;
+    font-size: 12px;
+    outline: none; /* Убираем обводку при фокусе */
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3); /* Параметры тени */
+    transition: box-shadow 0.3s ease; /* Анимация изменения тени */
+  }
+  margin-bottom: 25px;
+}
+
+.inputz2 {
+  display: flex;
+  button {
+    margin-left: 5px;
+    background-color: rgb(220, 96, 46);
+    color: white;
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3); /* Параметры тени */
+    transition: box-shadow 0.3s ease; /* Анимация изменения тени */
+  }
+  margin-bottom: 25px;
+  input {
+    outline: none; /* Убираем обводку при фокусе */
+    border: 1px solid white;
+    border-radius: 3px;
+    width: 40px;
+    height: 15px;
+    font-size: 12px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3); /* Параметры тени */
+    transition: box-shadow 0.3s ease; /* Анимация изменения тени */
+  }
+}

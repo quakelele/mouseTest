@@ -38,6 +38,7 @@ export const doubleClickSlice = createSlice({
       state.timeMid = "";
       state.timeRight = "";
     },
+  
   },
 });
 
@@ -48,6 +49,7 @@ export const {
   setMidleDouble,
   setRightDouble,
   setLeftDouble,
-  setReset
+  setReset,
+  
 } = doubleClickSlice.actions;
 export default doubleClickSlice.reducer;

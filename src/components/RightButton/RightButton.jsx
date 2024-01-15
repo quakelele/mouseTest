@@ -1,40 +1,40 @@
 import React from 'react'
-import style from './RightButton.module.scss'
-import { useSelector, useDispatch } from 'react-redux'
-import { setInputIntervalRight } from '../../redux/slices/clickSlice'
-const RightButton = () => {
-    const { right } = useSelector(state => state.click)
-    const { rightDouble, timeRight } = useSelector(state => state.doubleClick)
-    const dispatch = useDispatch()
-    const [input, setInput] = React.useState('')
-    const addToState = () => {
-        if (input) {
-            dispatch(setInputIntervalRight(input))
-        }
-    }
+import s from './RightButton.module.scss'
+import RightWhite from "../../img/RightWhite.png"
+import RightRed from "../../img/RightRed.png"
+import { useDispatch, useSelector } from 'react-redux'
+import { setRight } from '../../redux/slices/clickSlice'
+import { useState } from 'react'
+import { setTimeDoubleClickRight, setRightDouble } from '../../redux/slices/doubleClickSlice'
 
+
+const RightButton = () => {
+    const { intervalRight } = useSelector(state => state.click)
+    const [timeRight, setTimeRight] = useState(0);
+    const { rightDouble } = useSelector(state => state.doubleClick)
+    const dispatch = useDispatch()
+    const rightClick = (e) => {
+        if (e.button === 2) {
+            e.preventDefault();
+            dispatch(setRight())
+            const currentTimeRight = new Date().getTime();
+            const timeDiffRight = currentTimeRight - timeRight;
+
+            if (timeDiffRight < `${intervalRight}`) {
+                console.log(`Right click at: ${timeDiffRight} ms`);
+                dispatch(setRightDouble())
+                dispatch(setTimeDoubleClickRight(timeDiffRight))
+            }
+            setTimeRight(currentTimeRight);
+        }
+    };
 
     return (
-        <div className={rightDouble > 0 ? style.right2 : `${style.right}`}>
-            <div>
-                <h3 >ПРАВАЯ</h3>
-            </div>
-            <p>Все: {right}</p>
-            <p>Двойные: {rightDouble}</p>
-            <p>Интервал: <span>{rightDouble > 0 ? `${timeRight} мс` : `${""}`}</span></p>
-            <label className={rightDouble > 0 ? style.inputz2 : `${style.inputz}`}>
-                <input
-                    value={Number(input)}
-                    placeholder='25-150'
-                    onChange={(e) => setInput(e.target.value)}
-                />
-                <button 
-                    className={style.addButton}
-                    onClick={addToState}
-                >Введите значение</button>
-            </label>
+        <div onContextMenu={rightClick}>
+            <img className={rightDouble ? s.rightButtonR : `${s.rightButtonW}`} src={RightRed} alt="Right Button" />
+            <img className={s.rightButtonW} src={rightDouble ? RightRed : `${RightWhite}`} alt="Right Button" />
         </div>
     )
 }
 
-export default RightButton
+export { RightButton }

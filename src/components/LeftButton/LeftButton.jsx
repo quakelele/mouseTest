@@ -1,41 +1,37 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { setInputIntervalLeft } from '../../redux/slices/clickSlice'
-import style from './LeftButton.module.scss'
+import s from './LeftButton.module.scss'
+import LeftWhite from "../../img/LeftWhite.png"
+import LeftRed from "../../img/LeftRed.png"
+import { useDispatch, useSelector } from 'react-redux'
+import { setLeft } from '../../redux/slices/clickSlice'
+import { useState } from 'react'
+import { setTimeDoubleClickLeft, setLeftDouble } from '../../redux/slices/doubleClickSlice'
 const LeftButton = () => {
-    const dispatch = useDispatch()
-    const { left } = useSelector(state => state.click)
-    const { leftDouble, timeLeft } = useSelector(state => state.doubleClick)
+  const { intervalLeft } = useSelector(state => state.click)
+  const [timeLeft, setTimeLeft] = useState(0);
+  const { leftDouble } = useSelector(state => state.doubleClick)
+  const dispatch = useDispatch()
 
-    const [input, setInput] = React.useState('')
-    const addToState = () => {
-        if (input) {
-            dispatch(setInputIntervalLeft(input))
-        }
+  const leftClick = () => {
+    dispatch(setLeft())
+    const currentTimeLeft = new Date().getTime();
+    const timeDiffLeft = currentTimeLeft - timeLeft;
+
+    if (timeDiffLeft < `${intervalLeft}`) {
+      console.log(`Left click at: ${timeDiffLeft} ms`);
+      dispatch(setLeftDouble())
+      dispatch(setTimeDoubleClickLeft(timeDiffLeft))
     }
+    setTimeLeft(currentTimeLeft);
+  };
 
-    return (
 
-        <div className={leftDouble > 0 ? style.left2 : `${style.left}`}>
-            <div className={leftDouble > 0 ? style.leftInnerFailed : `${style.leftInner}`}>
-                <h3>ЛЕВАЯ</h3>
-            </div>
-            <p>Все: {left}</p>
-            <p>Двойные: {leftDouble}</p>
-            <p>Интервал: <span>{leftDouble > 0 ? `${timeLeft} мс` : `${""}`}</span></p>
-            <label className={leftDouble > 0 ? style.inputz2 : `${style.inputz}`}>
-                <input
-                    value={Number(input)}
-                    placeholder='25-150'
-                    onChange={(e) => setInput(e.target.value)}
-                />
-                <button
-                    className={style.addButton}
-                    onClick={addToState}
-                >Введите значение</button>
-            </label>
-        </div>
-    )
+  return (
+    <div onClick={leftClick}>
+      <img className={leftDouble ? s.leftButtonR : ` ${s.leftButtonW}`} src={LeftRed} alt="Left Button" />
+      <img className={s.leftButtonW} src={leftDouble ? LeftRed : `${LeftWhite}`} alt='left Button' />
+    </div>
+  )
 }
 
 export default LeftButton
