@@ -123,7 +123,6 @@
     border: 1px solid white;
     border-radius: 3px;
     width: 40px;
-    height: 15px;
     font-size: 10px;
     outline: none; /* Убираем обводку при фокусе */
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3); /* Параметры тени */
@@ -141,7 +140,6 @@
     border: 1px solid white;
     border-radius: 3px;
     width: 40px;
-    height: 15px;
     font-size: 10px;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3); /* Параметры тени */
     transition: box-shadow 0.3s ease; /* Анимация изменения тени */
@@ -185,7 +183,7 @@ textarea::selection {
 
 .addButton {
   width: 100px;
-  background-color: rgb(5, 168, 170);
+  background-color: rgba(0, 0, 0, 0.671);
   color: white;
   border-radius: 3px;
   margin-left: 5px;
@@ -195,8 +193,7 @@ textarea::selection {
   @media (max-width: 559px) {
     font-size: 8px;
     width: 40px;
-    height: 20px;
-    border-radius: 1px;
+    border-radius: 5px;
   }
 }
 
@@ -212,8 +209,7 @@ textarea::selection {
   @media (max-width: 559px) {
     font-size: 8px;
     width: 40px;
-    height: 20px;
-    border-radius: 1px;
+    border-radius: 5px;
   }
 }
 
@@ -228,5 +224,5 @@ textarea::selection {
 .closeTag {
   display: inline-block;
   cursor: pointer;
-  margin-top: 3px;
+  margin-top: 5px;
 }
