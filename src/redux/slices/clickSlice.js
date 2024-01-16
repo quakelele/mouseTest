@@ -5,10 +5,10 @@ const initialState = {
   midle: 0,
   reset: 0,
   inputLeft: "",
-  intervalLeft: "",
-  intervalLeftJsx: "",
-  intervalRight: "",
-  intervalMidle: "",
+  intervalLeft: 25,
+  intervalLeftJsx: 25,
+  intervalRight: 25,
+  intervalMidle: 25,
   onOff: false
 };
 
@@ -32,21 +32,21 @@ export const clickSlice = createSlice({
       state.input = 0;
     },
     setInputIntervalLeft(state, action) {
-      if (action.payload > 0 && action.payload < 1001) {
+      if (action.payload > 0 && action.payload < 5001) {
         state.intervalLeft = action.payload;
         state.intervalLeftJsx = action.payload;
         console.log("IntervalLeft:", state.intervalLeft);
       }
     },
     setInputIntervalRight(state, action) {
-      if (action.payload > 0 && action.payload < 1001) {
+      if (action.payload > 0 && action.payload < 5001) {
         state.intervalRight = action.payload;
 
         console.log("intervalRight:", state.intervalRight);
       }
     },
     setInputIntervalMidle(state, action) {
-      if (action.payload > 0 && action.payload < 1001) {
+      if (action.payload > 0 && action.payload < 5001) {
         state.intervalMidle = action.payload;
         console.log("intervalMidle:", state.intervalMidle);
       }
