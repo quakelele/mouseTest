@@ -1,6 +1,8 @@
 import React from 'react'
 import s from './RightButton.module.scss'
 import RightWhite from "../../img/RightWhite.png"
+import RIGHTBLACK from "../../img/RIGHTBLACK.png"
+import blurred from "../../img/blurred.png"
 import RightRed from "../../img/RightRed.png"
 import { useDispatch, useSelector } from 'react-redux'
 import { setRight } from '../../redux/slices/clickSlice'
@@ -9,7 +11,7 @@ import { setTimeDoubleClickRight, setRightDouble } from '../../redux/slices/doub
 
 
 const RightButton = () => {
-    const { intervalRight } = useSelector(state => state.click)
+    const { intervalRight, onOff } = useSelector(state => state.click)
     const [timeRight, setTimeRight] = useState(0);
     const { rightDouble } = useSelector(state => state.doubleClick)
     const dispatch = useDispatch()
@@ -32,7 +34,10 @@ const RightButton = () => {
     return (
         <div onContextMenu={rightClick}>
             <img className={rightDouble ? s.rightButtonR : `${s.rightButtonW}`} src={RightRed} alt="Right Button" />
-            <img className={s.rightButtonW} src={rightDouble ? RightRed : `${RightWhite}`} alt="Right Button" />
+            {onOff ?
+                (<img className={s.rightButtonW} src={rightDouble ? RightRed : `${RIGHTBLACK}`} alt="Right Button" />)
+                :
+                (<img className={s.rightButtonW} src={rightDouble ? RightRed : `${RightWhite}`} alt="Right Button" />)}
         </div>
     )
 }

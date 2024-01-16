@@ -15,7 +15,7 @@ const ResetButton = () => {
     }
     return (
         <div onClick={setResetAll}>
-            <img className={onOff ? s.resetButton2 : `${s.resetButton}`} src={onOff ? ResetB : `${Reset}`} alt="Reset Button" />
+            <img className={s.resetButton} src={onOff ? ResetB : `${Reset}`} alt="Reset Button" />
         </div>
     )
 }

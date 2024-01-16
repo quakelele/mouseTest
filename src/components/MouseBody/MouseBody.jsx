@@ -14,6 +14,7 @@ const MouseBody = () => {
         <div>
 
             <div className={s.mouseContainer}>
+                
                 <img className={s.mouse} src={onOff ? bodyFnaticW : bodyFnatic} alt="Mouse" />
                 {/* <img className={s.mouse2} src={bodyFnaticW} alt="Mouse" /> */}
                 <LeftButton />

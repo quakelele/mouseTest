@@ -25,7 +25,7 @@ const Layout = () => {
                 <MouseBody />
             </div>
             <h4 className={onOff ? s.fnaticW : `${s.fnaticW2}`}>Fnatic Boltz</h4>
-            <button onClick={handler}><b>B&W</b></button>
+            <button className={onOff ? s.textBlack : `${s.textWhite}`} onClick={handler}><b>Black & White</b></button>
         </div>
     )
 }

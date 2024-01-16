@@ -22,7 +22,7 @@
   color: black;
 }
 button {
-  width: 40px;
+  width: 120px;
   height: 20px;
   background-color: rgb(185, 185, 185);
   color: white;
@@ -31,4 +31,15 @@ button {
   border: none;
   box-shadow: 1 3px 4px rgba(0, 0, 0, 0.3); /* Параметры тени */
   transition: box-shadow 0.5s ease; /* Анимация изменения тени */
+  cursor: pointer;
+}
+
+.textBlack {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.959);
+}
+
+.textWhite {
+  color: white;
+  background-color:rgba(0, 0, 0, 0.884);
 }
