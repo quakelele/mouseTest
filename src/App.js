@@ -7,7 +7,7 @@ function App() {
   const { onOff } = useSelector((state) => state.click);
   React.useEffect(() => {
     onOff
-      ? (document.body.style.backgroundColor = "BLACK")
+      ? (document.body.style.backgroundColor = "rgba(0, 0, 0, .950)")
       : (document.body.style.backgroundColor = "#e6e6e6");
   }, [onOff]);
 
