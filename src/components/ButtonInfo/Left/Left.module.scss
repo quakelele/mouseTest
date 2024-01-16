@@ -9,7 +9,7 @@
   margin-bottom: 30px;
   background-color: #fff; /* Цвет фона вашего блока */
   border-radius: 8px; /* Если нужен скругленный угол */
-  box-shadow: 0 4px 8px rgba(1, 0, 0, 0.4); /* Параметры тени */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4); /* Параметры тени */
   transition: box-shadow 0.3s ease; /* Анимация изменения тени */
 
   @media (max-width: 728px) {

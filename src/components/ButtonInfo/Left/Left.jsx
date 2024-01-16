@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import s from './Left.module.scss'
 const Left = () => {
     const dispatch = useDispatch()
-
+    const { onOff } = useSelector(state => state.click)
     const { leftDouble, timeLeft } = useSelector(state => state.doubleClick)
     const [input, setInput] = React.useState(25)
     const { left } = useSelector(state => state.click)
@@ -17,8 +17,6 @@ const Left = () => {
         }, 3000);
         dispatch(setInputIntervalLeft(input));
     };
-
-
     React.useEffect(() => {
         return () => clearTimeout();
     }, []);
@@ -41,7 +39,7 @@ const Left = () => {
                 {showModal && (
                     <div className={s.modal}>
                         <div className={s.modalContent}>
-                            <p><b></b>
+                            <p>
                                 {input <= 25 ? "default value is 25 ms.." : <p><b>{input}</b> ms selected</p>}</p>
                         </div>
                     </div>

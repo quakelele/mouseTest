@@ -14,3 +14,21 @@
   height: auto;
   margin: 0 auto;
 }
+
+.fnaticW {
+  color: white;
+}
+.fnaticB {
+  color: black;
+}
+button {
+  width: 40px;
+  height: 20px;
+  background-color: rgb(185, 185, 185);
+  color: white;
+  border-radius: 3px;
+  margin-left: 5px;
+  border: none;
+  box-shadow: 1 3px 4px rgba(0, 0, 0, 0.3); /* Параметры тени */
+  transition: box-shadow 0.5s ease; /* Анимация изменения тени */
+}

@@ -4,23 +4,28 @@ import MouseBody from "../MouseBody/MouseBody"
 import { Left } from '../ButtonInfo/Left/Left'
 import { Right } from "../ButtonInfo/Right/Right"
 import { Scroll } from '../ButtonInfo/Scroll/Scroll'
-import { ResetButton } from '../ResetButton/ResetButton'
-
+import { setOnOff } from '../../redux/slices/clickSlice'
+import { useSelector, useDispatch } from 'react-redux'
 const Layout = () => {
-
+    const dispatch = useDispatch()
+    const { onOff } = useSelector(state => state.click)
+    const handler = () => {
+        dispatch(setOnOff())
+    }
     return (
         <div className={s.wrapper}>
-            <h4>Test the capability of your mouse to register double clicks!</h4>
+            <h4 className={onOff ? s.fnaticW : `${s.fnaticW2}`}>Test the capability of your mouse to register double clicks!</h4>
             <div className={s.wrapper__inner}>
                 <Left />
-                <Right />
                 <Scroll />
-                {/* <ResetButton/> */}
+                <Right />
+
             </div>
             <div className={s.mouseBody}>
                 <MouseBody />
             </div>
-            <h4>Fnatic Boltz </h4><p>(don't buy this shit)</p>
+            <h4 className={onOff ? s.fnaticW : `${s.fnaticW2}`}>Fnatic Boltz</h4>
+            <button onClick={handler}><b>B&W</b></button>
         </div>
     )
 }

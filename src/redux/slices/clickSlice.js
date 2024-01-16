@@ -9,6 +9,7 @@ const initialState = {
   intervalLeftJsx: "",
   intervalRight: "",
   intervalMidle: "",
+  onOff: false
 };
 
 export const clickSlice = createSlice({
@@ -50,6 +51,9 @@ export const clickSlice = createSlice({
         console.log("intervalMidle:", state.intervalMidle);
       }
     },
+    setOnOff(state){
+      state.onOff = !state.onOff
+    }
   },
 });
 
@@ -58,6 +62,7 @@ export const {
   setInputIntervalMidle,
   setInputIntervalLeft,
   resetAll,
+  setOnOff,
   setMidle,
   setRight,
   setLeft,
