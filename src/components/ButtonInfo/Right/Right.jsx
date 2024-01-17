@@ -42,7 +42,7 @@ const Right = () => {
                     onChange={(e) => setInput(e.target.value)}
                 />
 
-                <button className={rightDouble > 0 ? s.addButton2 : `${s.addButton}`}
+                <button className={rightDouble > 0 ? s.addButton2 : `${s.addButton}` && onOff ? s.addButton3 : `${s.addButton4}`}
                     onClick={handleClick} > set interval </button>
 
                 {showModal && (

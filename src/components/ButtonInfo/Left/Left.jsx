@@ -5,27 +5,24 @@ import s from './Left.module.scss'
 import { IoIosClose } from "react-icons/io";
 const Left = () => {
     const dispatch = useDispatch()
-    const { onOff } = useSelector(state => state.click)
+    const { onOff,left } = useSelector(state => state.click)
     const { leftDouble, timeLeft } = useSelector(state => state.doubleClick)
     const [input, setInput] = React.useState('')
-    const { left } = useSelector(state => state.click)
     const [showModal, setShowModal] = React.useState(false);
     const handleClick = () => {
-
         setShowModal(true);
-        // Спрятать модальное окно через 3 секунды
         setTimeout(() => {
             setShowModal(false);
         }, 3000);
         if (input <= 25) {
             setInput(25)
+       
         }
         dispatch(setInputIntervalLeft(input));
     };
     React.useEffect(() => {
         return () => clearTimeout();
     }, []);
-
 
     return (
         <div className={leftDouble > 0 ? s.leftClickWrapper2 : `${s.leftClickWrapper}` && onOff ? s.leftClickWrapper4 : `${s.leftClickWrapper3}`}>
@@ -39,8 +36,7 @@ const Left = () => {
                     placeholder='def:25'
                     onChange={(e) => setInput(e.target.value)}
                 />
-
-                <button className={leftDouble > 0 ? s.addButton2 : `${s.addButton}`}
+                <button className={leftDouble > 0 ? s.addButton2 : `${s.addButton}` && onOff ? s.addButton3 : `${s.addButton4}`}
                     onClick={handleClick} > set interval </button>
 
                 {showModal && (

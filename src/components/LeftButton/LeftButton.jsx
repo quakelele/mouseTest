@@ -30,7 +30,9 @@ const LeftButton = () => {
     <div onClick={leftClick}>
       <img className={leftDouble ? s.leftButtonR : ` ${s.leftButtonW}`} src={LeftRed} alt="Left Button" />
 
-      {onOff ? (<img className={s.leftButtonW} src={leftDouble ? LeftRed : `${LEFTBLACK}`} alt='left BButton' />) : (<img className={s.leftButtonW} src={leftDouble ? LeftRed : `${LeftWhite}`} alt='left Button' />)}
+      {onOff ? 
+      (<img className={s.leftButtonW} src={leftDouble ? LeftRed : `${LEFTBLACK}`} alt='left BButton' />) : (<img className={s.leftButtonW} src={leftDouble ? LeftRed : `${LeftWhite}`} alt='left Button' />)}
+      
     </div>
   )
 }
