@@ -34,7 +34,7 @@ const Scroll = () => {
             <h4>Double: <span >{midleDouble > 0 ? midleDouble : ''}</span> </h4>
             <h4>Interval: <span>{midleDouble > 0 ? `${timeMid} ms` : `${""} `}</span> </h4>
             <label className={midleDouble > 0 ? s.inputz2 : `${s.inputz}`}>
-                <IoIosClose onClick={() => setInput('')} className={s.closeTag} />
+            <IoIosClose onClick={() => setInput(25)} className={s.closeTag} />
                 <input
                     value={input}
                     placeholder='def:25'

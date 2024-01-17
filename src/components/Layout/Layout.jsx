@@ -1,6 +1,6 @@
 import React from 'react'
 import s from './Layout.module.scss'
-import MouseBody from "../MouseBody/MouseBody"
+import { MouseBody } from "../MouseBody/MouseBody"
 import { Left } from '../ButtonInfo/Left/Left'
 import { Right } from "../ButtonInfo/Right/Right"
 import { Scroll } from '../ButtonInfo/Scroll/Scroll'
@@ -30,4 +30,4 @@ const Layout = () => {
     )
 }
 
-export default Layout
+export { Layout }

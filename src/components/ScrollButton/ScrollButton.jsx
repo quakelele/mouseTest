@@ -17,7 +17,6 @@ const ScrollButton = () => {
             dispatch(setMidle())
             const currentTimeMid = new Date().getTime();
             const timeDiffMid = currentTimeMid - timeMid;
-
             if (timeDiffMid < `${intervalMidle}`) {
                 console.log(`Midle click at: ${timeDiffMid} ms`);
                 dispatch(setMidleDouble())
@@ -26,7 +25,6 @@ const ScrollButton = () => {
             setTimeMid(currentTimeMid);
         }
     };
-
     return (
 
         <div onMouseDown={midleClick}>

@@ -36,8 +36,9 @@
   flex: 1; /* Равномерное распределение пространства между элементами */
 
   text-align: left;
+  color: white;
   margin-bottom: 30px;
-  background-color: rgb(255, 137, 91);
+  background-color: rgb(90, 19, 2);
   border-radius: 8px; /* Если нужен скругленный угол */
   box-shadow: 0 4px 8px rgba(1, 0, 0, 0.4); /* Параметры тени */
   transition: box-shadow 0.3s ease; /* Анимация изменения тени */
@@ -202,7 +203,7 @@ textarea::selection {
 .addButton2 {
   width: 100px;
   margin-left: 5px;
-  background-color: rgb(220, 96, 46);
+  background-color: rgba(194, 0, 0, 0.712);
   color: white;
   border-radius: 3px;
   border: none;

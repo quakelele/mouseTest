@@ -27,4 +27,4 @@ const MouseBody = () => {
     )
 }
 
-export default MouseBody
+export  {MouseBody}

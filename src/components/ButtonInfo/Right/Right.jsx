@@ -35,7 +35,7 @@ const Right = () => {
             <h4>Double: <span >{rightDouble > 0 ? rightDouble : ''}</span> </h4>
             <h4>Interval: <span>{rightDouble > 0 ? `${timeRight} ms` : `${""}`}</span> </h4>
             <label className={rightDouble > 0 ? s.inputz2 : `${s.inputz}`}>
-            <IoIosClose  onClick={() => setInput('')} className={s.closeTag} />
+            <IoIosClose onClick={() => setInput(25)} className={s.closeTag} />
                 <input
                    value={input}
                     placeholder='def:25'

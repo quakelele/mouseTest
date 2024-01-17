@@ -1,8 +1,6 @@
-import style from "./App.module.scss";
-// import Header from "./components2/Header/Header";
 import React from "react";
-import Layout from "./components/Layout/Layout";
-import { useSelector, useDispatch } from "react-redux";
+import { Layout } from "./components/Layout/Layout";
+import { useSelector } from "react-redux";
 function App() {
   const { onOff } = useSelector((state) => state.click);
   React.useEffect(() => {
@@ -12,7 +10,7 @@ function App() {
   }, [onOff]);
 
   return (
-    <div className={style.App}>
+    <div>
       <Layout />
     </div>
   );
