@@ -6,10 +6,10 @@ const initialState = {
   reset: 0,
   inputLeft: "",
   intervalLeft: 25,
-  intervalLeftJsx: 25,
   intervalRight: 25,
   intervalMidle: 25,
-  onOff: false
+  ebalstate: '',
+  onOff: false,
 };
 
 export const clickSlice = createSlice({
@@ -25,35 +25,38 @@ export const clickSlice = createSlice({
     setMidle(state) {
       state.midle++;
     },
-    resetAll(state) {
+    resetAll(state,action) {
       state.right = 0;
       state.midle = 0;
       state.left = 0;
       state.input = 0;
+      state.intervalMidle = 0;
+      state.intervalLeft = 0;
+      state.intervalRight = 0;
     },
     setInputIntervalLeft(state, action) {
-      if (action.payload > 0 && action.payload < 5001) {
+      if (action.payload > 0) {
         state.intervalLeft = action.payload;
-        state.intervalLeftJsx = action.payload;
         console.log("IntervalLeft:", state.intervalLeft);
       }
     },
     setInputIntervalRight(state, action) {
-      if (action.payload > 0 && action.payload < 5001) {
+      if (action.payload > 0) {
         state.intervalRight = action.payload;
-
         console.log("intervalRight:", state.intervalRight);
       }
     },
     setInputIntervalMidle(state, action) {
-      if (action.payload > 0 && action.payload < 5001) {
+      if (action.payload > 0) {
         state.intervalMidle = action.payload;
         console.log("intervalMidle:", state.intervalMidle);
       }
     },
-    setOnOff(state){
-      state.onOff = !state.onOff
-    }
+    setOnOff(state) {
+      state.onOff = !state.onOff;
+    },
+
+
   },
 });
 
@@ -65,6 +68,7 @@ export const {
   setOnOff,
   setMidle,
   setRight,
+  ebalayka,
   setLeft,
 } = clickSlice.actions;
 export default clickSlice.reducer;

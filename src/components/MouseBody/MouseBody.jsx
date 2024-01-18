@@ -10,11 +10,12 @@ import { useSelector } from 'react-redux'
 
 const MouseBody = () => {
     const { onOff } = useSelector(state => state.click)
+
     return (
         <div>
 
             <div className={s.mouseContainer}>
-                
+
                 <img className={s.mouse} src={onOff ? bodyFnaticW : bodyFnatic} alt="Mouse" />
                 {/* <img className={s.mouse2} src={bodyFnaticW} alt="Mouse" /> */}
                 <LeftButton />
@@ -27,4 +28,4 @@ const MouseBody = () => {
     )
 }
 
-export  {MouseBody}
+export { MouseBody }

@@ -22,7 +22,10 @@ const Right = () => {
         }
         dispatch(setInputIntervalRight(input));
     };
-
+    const resetInput = () => {
+        dispatch(setInputIntervalRight(25))
+        setInput('')
+    };
 
     React.useEffect(() => {
         return () => clearTimeout();
@@ -35,7 +38,7 @@ const Right = () => {
             <h4>Double: <span >{rightDouble > 0 ? rightDouble : ''}</span> </h4>
             <h4>Interval: <span>{rightDouble > 0 ? `${timeRight} ms` : `${""}`}</span> </h4>
             <label className={rightDouble > 0 ? s.inputz2 : `${s.inputz}`}>
-            <IoIosClose onClick={() => setInput(25)} className={s.closeTag} />
+            <IoIosClose onClick={resetInput} className={s.closeTag} />
                 <input
                    value={input}
                     placeholder='def:25'

@@ -3,8 +3,9 @@ import s from './ResetButton.module.scss'
 import Reset from "../../img/Reset.png"
 import ResetB from "../../img/ResetB.png"
 import { useDispatch, useSelector } from 'react-redux'
-import { resetAll } from '../../redux/slices/clickSlice'
-import { setReset, setTimeDoubleClickLeft } from '../../redux/slices/doubleClickSlice'
+import {  resetAll, setInputIntervalMidle } from '../../redux/slices/clickSlice'
+import { setReset, setTimeDoubleClickLeft,  } from '../../redux/slices/doubleClickSlice'
+
 const ResetButton = () => {
     const { onOff } = useSelector(state => state.click)
     const dispatch = useDispatch()
@@ -12,6 +13,7 @@ const ResetButton = () => {
         dispatch(setReset())
         dispatch(resetAll())
         dispatch(setTimeDoubleClickLeft())
+        dispatch(setInputIntervalMidle())
     }
     return (
         <div onClick={setResetAll}>
