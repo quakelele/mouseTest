@@ -161,7 +161,6 @@ textarea::selection {
   background-color: #3498db;
   color: #fff;
 }
-
 .modal {
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3); /* Параметры тени */
   transition: box-shadow 0.3s ease; /* Анимация изменения тени */
@@ -174,9 +173,10 @@ textarea::selection {
   transform: translate(-50%, -50%);
   background-color: #fefefe;
   padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #888;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  font-size: 12px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5); /* Параметры тени */
   animation: fadeIn 0.5s ease-in-out;
 }
 

@@ -49,8 +49,8 @@ const Scroll = () => {
                 {showModal && (
                     <div className={s.modal}>
                         <div className={s.modalContent}>
-                            <p><b></b>
-                                {input <= 25 ? "default value is 25 ms.." : <p><b>{input}</b> ms selected</p>}</p>
+                            <div><b></b>
+                                {input <= 25 ? "default value is 25 ms.." : <p><b>{input}</b> ms selected</p>}</div>
                         </div>
                     </div>
                 )}
