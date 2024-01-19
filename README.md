@@ -5,8 +5,7 @@
 <p>npm install, npm start</p>
 <h2>Клонирование репозитория: </h2>
 git clone https://github.com/quakelele/mouseTest.git
-<br>
-<br>
+
 ![2](https://github.com/quakelele/mouseTest/assets/154896596/139c591b-4a9d-401f-8800-2efa2d39c0ea)
 ![1](https://github.com/quakelele/mouseTest/assets/154896596/93feed1c-1a1f-49da-a013-ac85d5c198d5)
 
