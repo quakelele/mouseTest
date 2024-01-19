@@ -1,4 +1,11 @@
 О проекте:
 Автоматическое фиксирование данных о двойных кликах всех кнопок мыши, с использованием React JS и Redux Toolkit. Модальное окно для информирования о смене задержек между кликами. Темная и светлая темы. Анимация кнопок мыши. Интегрированный инпут для ввода данных позволяет легко фиксировать и анализировать результаты от клика до клика.
-  ![2](https://github.com/quakelele/mouseTest/assets/154896596/77da7fe8-42b0-4025-bbed-d5b3a8e4aa3f)
-![1](https://github.com/quakelele/mouseTest/assets/154896596/f7a5e785-b5bb-4aab-895b-0f4dc82779de)
+
+Для запуска проекта выполнить следующие команды:
+npm install, npm start
+
+Клонирование репозитория: git clone https://github.com/quakelele/mouseTest.git
+![2](https://github.com/quakelele/mouseTest/assets/154896596/139c591b-4a9d-401f-8800-2efa2d39c0ea)
+![1](https://github.com/quakelele/mouseTest/assets/154896596/93feed1c-1a1f-49da-a013-ac85d5c198d5)
+
+
