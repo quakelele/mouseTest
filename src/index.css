@@ -10,5 +10,6 @@ body {
   align-items: center;
   height: 98vh;
   background-color: #e6e6e6;
+  overflow: hidden;
 }
 

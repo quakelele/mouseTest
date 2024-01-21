@@ -1,0 +1,16 @@
+{
+    "Left" : "Left",
+    "Right" : "Right",
+    "Scroll" : "Scroll",
+    "Double" : "Double",
+    "Interval" : "Interval",
+    "setInterval" : "set interval",
+    "def 25" : "def:25",
+    "defaultValue": "default value is 25 ms..", 
+    "selectedValue" : "ms selected",
+    "black" : "Light",
+    "white" : "Dark",
+    "title" : "Test the capability of your mouse to register double clicks!",
+    "to English": "to English"
+
+}
