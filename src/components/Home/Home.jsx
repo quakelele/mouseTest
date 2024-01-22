@@ -25,7 +25,7 @@ const Home = () => {
         <div className={s.home}>
             <div className={s.btnFlag}>
                 <button
-                    className={onOff ? s.readmebtn2 : `${s.readmebtn}`  }
+                    className={onOff ? s.readmebtn2 : `${s.readmebtn}`}
                     onClick={() => setOn(!on)}
                 >
                     {t("readme")}
