@@ -15,7 +15,7 @@ const Right = ({ t }) => {
         // Спрятать модальное окно через 3 секунды
         setTimeout(() => {
             setShowModal(false);
-        }, 3000);
+        }, 8000);
         if (input <= 25) {
             setInput(25)
         }
@@ -43,20 +43,23 @@ const Right = ({ t }) => {
                         value={input}
                         placeholder={t('def 25')}
                         onChange={(e) => setInput(e.target.value)}
-                    />
-
-                    <button className={rightDouble > 0 ? s.addButton2 : `${s.addButton}` && onOff ? s.addButton3 : `${s.addButton4}`}
-                        onClick={handleClick} > <b>{t('setInterval')}</b> </button>
-
-                    {showModal && (
+                    /> {showModal && (
                         <div className={s.modal}>
-                            <div className={s.modalContent}>
-                                <div><b></b>
-                                    {input <= 25 ? t('defaultValue') : <p><b>{input}</b> {t('selectedValue')}</p>}</div>
+                            <div
+                                className={s.modalContent}>
+                                <div>
+                                    {input <= 25 ? t('defaultValue') : <p>
+                                        <b>
+                                            {input}
+                                        </b> {t('selectedValue')}</p>}
+                                </div>
                             </div>
-                        </div>
-                    )}
-                    <div className={s.ebal}>  </div>
+                        </div>)}
+                    <button
+                        className={rightDouble > 0 ? s.addButton2 : `${s.addButton}` && onOff ? s.addButton3 : `${s.addButton4}`}
+                        onClick={handleClick} > <b>{t('setInterval')}</b>
+                    </button>
+                   
                 </label>
             </div>
         </container>

@@ -41,6 +41,7 @@
   @include fluid-text(12, 19);
   color: white;
   margin-bottom: 15px;
+  text-shadow: 2px 3px 4px rgba(255, 255, 255, 0.5);
 }
 .fnaticW2 {
   margin-bottom: 15px;
@@ -66,7 +67,7 @@ button {
 
 .textWhite {
   @include textBW;
-  
+
   color: white;
   box-shadow: 0 4px 8px rgba(1, 0, 0, 0.4);
   background-color: rgb(37, 37, 37);

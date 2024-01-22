@@ -44,12 +44,7 @@ const Left = ({ t }) => {
                         value={input}
                         placeholder={t('def 25')}
                         onChange={(e) => setInput(e.target.value)}
-                    />
-                    <button
-                        className={leftDouble > 0 ? s.addButton2 : `${s.addButton}` && onOff ? s.addButton3 : `${s.addButton4}`}
-                        onClick={handleClick} > <b>{t('setInterval')}</b>
-                    </button>
-                    {showModal && (
+                    /> {showModal && (
                         <div className={s.modal}>
                             <div
                                 className={s.modalContent}>
@@ -61,6 +56,11 @@ const Left = ({ t }) => {
                                 </div>
                             </div>
                         </div>)}
+                    <button
+                        className={leftDouble > 0 ? s.addButton2 : `${s.addButton}` && onOff ? s.addButton3 : `${s.addButton4}`}
+                        onClick={handleClick} > <b>{t('setInterval')}</b>
+                    </button>
+                   
                 </label>
             </div >
         </container>
