@@ -1,3 +1,22 @@
+@mixin fluid-text($min: 1, $max: 35) {
+  font-size: clamp(#{$min}px, #{$max / 1920 * 100}vw, #{$max}px);
+}
+@mixin textBW {
+  @include fluid-text(12, 13);
+  margin-top: 2px;
+  z-index: 255;
+}
+
+@mixin langButton {
+  margin: 0 auto;
+  cursor: pointer;
+  font-size: 10px;
+  width: 70px;
+  border-radius: 5px;
+  font-weight: 700;
+  padding: 5px;
+}
+
 .wrapper {
   text-align: center;
   align-items: center;
@@ -6,20 +25,25 @@
 }
 
 .wrapper__inner {
+  margin-top: 50px;
+  justify-content: center;
   display: flex;
   flex-direction: row;
 }
 
 .mouseBody {
+
   width: 40vw;
   height: auto;
   margin: 0 auto;
 }
 
 .fnaticW {
+  @include fluid-text(12, 19);
   color: white;
 }
-.fnaticB {
+.fnaticW2 {
+  @include fluid-text(12, 19);
   color: black;
 }
 button {
@@ -33,42 +57,33 @@ button {
 }
 
 .textBlack {
-  z-index: 255;
-  margin-top: 2px;
+  @include textBW;
   color: black;
   background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 11px 11px rgba(255, 255, 255, 0.4);
 }
 
 .textWhite {
-  margin-top: 2px;
-  z-index: 255;
-  font-size: 13px;
+  @include textBW;
   color: white;
+  box-shadow: 0 4px 8px rgba(1, 0, 0, 0.4);
   background-color: rgb(37, 37, 37);
 }
 
 .btnOfLang {
-  margin: 0 auto;
-  cursor: pointer;
-  font-size: 10px;
-  background-color: gray;
-  width: 60px;
-  border-radius: 5px;
+  @include fluid-text(3, 11);
+  @include langButton;
   color: white;
-  font-weight: 700;
-  padding: 5px;
   background-color: rgb(57, 62, 64);
 }
 
 .btnOfLang2 {
-  margin: 0 auto;
-  cursor: pointer;
-  font-size: 10px;
-  background-color: gray;
-  width: 60px;
-  border-radius: 5px;
+  @include fluid-text(3, 11);
+  @include langButton;
   color: black;
-  font-weight: 700;
-  padding: 5px;
   background-color: white;
+}
+
+h4 {
+
 }

@@ -1,16 +1,18 @@
 {
-    "Left" : "Left",
-    "Right" : "Right",
-    "Scroll" : "Scroll",
-    "Double" : "Double",
-    "Interval" : "Interval",
-    "setInterval" : "set interval",
-    "def 25" : "def:25",
-    "defaultValue": "default value is 25 ms..", 
-    "selectedValue" : "ms selected",
-    "black" : "Light",
-    "white" : "Dark",
-    "title" : "Test the capability of your mouse to register double clicks!",
-    "to English": "to English"
-
+    "Left": "Left",
+    "Right": "Right",
+    "Scroll": "Scroll",
+    "Double": "Double",
+    "Interval": "Interval",
+    "setInterval": "set interval",
+    "def 25": "def:25",
+    "defaultValue": "default value is 25 ms..",
+    "selectedValue": "ms selected",
+    "black": "Light",
+    "white": "Dark",
+    "title": "Test the capability of your mouse to register double clicks!",
+    "to English": "to English",
+    "readme": "Readme",
+    "descrFaq": "Double helix or double click bag. On a single click it executes second click (technical error, mainly a problem with the switches, The firmware is fixed if there is outside support manufacturer, otherwise replace the switch). Baggage appears from 15 to 30ms. The default value is set to 25. For check the performance of the application, set the average value from 120++.",
+    "howItWorks" : "How it works?"
 }

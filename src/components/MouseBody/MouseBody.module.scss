@@ -3,19 +3,20 @@
   display: inline-block;
   max-width: 210px;
   height: auto;
+  .mouse {
+    width: 100%;
+    height: auto;
+  }
+
+  .mouse2 {
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: auto;
+  }
+
+  .flexB {
+    display: flex;
+    flex-direction: row;
+  }
 }
-
-.mouse {
-  width: 100%;
-  height: auto;
-}
-
-.mouse2 {
-  left: 0px;
-  position: absolute;
-  width: 100%;
-  height: auto;
-}
-
-
-

@@ -31,32 +31,34 @@ const Scroll = ({ t }) => {
         setInput('')
     };
     return (
+        <container className={s.container}>
+            <div className={midleDouble > 0 ? s.midWRed : `${s.midWDef}` && onOff ? s.midWWhite2 : `${s.midWWhite}`}>
+                <h4 >{t('Scroll')}: <span>{midle > 0 ? midle : ''}</span>  </h4>
+                <h4>{t('Double')}: <span >{midleDouble > 0 ? midleDouble : ''}</span> </h4>
+                <h4>{t('Interval')}: <span>{midleDouble > 0 ? `${timeMid} ms` : `${""} `}</span> </h4>
+                <label className={midleDouble > 0 ? s.inputz2 : `${s.inputz}`}>
+                    <IoIosClose onClick={resetInput} className={s.closeTag} />
+                    <input
+                        value={input}
+                        placeholder={t('def 25')}
+                        onChange={(e) => setInput(e.target.value)}
+                    />
+                    <button className={midleDouble > 0 ? s.addButton2 : `${s.addButton}` && onOff ? s.addButton3 : `${s.addButton4}`}
+                        onClick={handleClick} > <b>{t('setInterval')}</b> </button>
 
-        <div className={midleDouble > 0 ? s.midClickWrapper2 : `${s.midClickWrapper}` && onOff ? s.midClickWrapper4 : `${s.midClickWrapper3}`}>
-            <h4 >{t('Scroll')}: <span>{midle > 0 ? midle : ''}</span>  </h4>
-            <h4>{t('Double')}: <span >{midleDouble > 0 ? midleDouble : ''}</span> </h4>
-            <h4>{t('Interval')}: <span>{midleDouble > 0 ? `${timeMid} ms` : `${""} `}</span> </h4>
-            <label className={midleDouble > 0 ? s.inputz2 : `${s.inputz}`}>
-                <IoIosClose onClick={resetInput} className={s.closeTag} />
-                <input
-                    value={input}
-                    placeholder={t('def 25')}
-                    onChange={(e) => setInput(e.target.value)}
-                />
-                <button className={midleDouble > 0 ? s.addButton2 : `${s.addButton}` && onOff ? s.addButton3 : `${s.addButton4}`}
-                    onClick={handleClick} > <b>{t('setInterval')}</b> </button>
-
-                {showModal && (
-                    <div className={s.modal}>
-                        <div className={s.modalContent}>
-                            <div><b></b>
-                                {input <= 25 ? t('defaultValue') : <p><b>{input}</b> {t('selectedValue')}</p>}</div>
+                    {showModal && (
+                        <div className={s.modal}>
+                            <div className={s.modalContent}>
+                                <div><b></b>
+                                    {input <= 25 ? t('defaultValue') : <p><b>{input}</b> {t('selectedValue')}</p>}</div>
+                            </div>
                         </div>
-                    </div>
-                )}
-                <div className={s.ebal}>  </div>
-            </label>
-        </div>
+                    )}
+                    <div className={s.ebal}>  </div>
+                </label>
+            </div>
+        </container>
+
     )
 }
 
