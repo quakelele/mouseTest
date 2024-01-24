@@ -15,9 +15,13 @@ https://mouse-test.vercel.app/
 
 <h3>Клонирование: </h2>
 git clone https://github.com/quakelele/mouseTest.git
+<br>
+
+![image](https://github.com/quakelele/mouseTest/assets/154896596/2421b2b6-821a-45b3-bb85-eaa79bbfa99e)
+![светоа3я](https://github.com/quakelele/mouseTest/assets/154896596/76c74801-4535-4843-8acd-93d3b184fdb9)
+
+![34](https://github.com/quakelele/mouseTest/assets/154896596/3ea84b2d-bf20-415a-8bda-0ca531e78b39)
 
 
-![2](https://github.com/quakelele/mouseTest/assets/154896596/139c591b-4a9d-401f-8800-2efa2d39c0ea)
-![1](https://github.com/quakelele/mouseTest/assets/154896596/93feed1c-1a1f-49da-a013-ac85d5c198d5)
 
 
