@@ -9,13 +9,12 @@ import bodyFnaticW from "../../img/bodyFnaticW.png"
 import { useSelector } from 'react-redux'
 
 const MouseBody = () => {
-    const { onOff } = useSelector(state => state.click)
+    const { theme } = useSelector(state => state.click)
 
     return (
 
             <div className={s.mouseContainer}>
-                <img className={s.mouse} src={onOff ? bodyFnaticW : bodyFnatic} alt="Mouse" />
-         
+                <img className={s.mouse} src={theme === "Light" ? bodyFnaticW : bodyFnatic} alt="Mouse" />
                 <LeftButton />
                 <RightButton />
                 <ScrollButton />

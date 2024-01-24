@@ -30,15 +30,14 @@ export const doubleClickSlice = createSlice({
     setTimeDoubleClickRight(state, action) {
       state.timeRight = action.payload;
     },
-    setReset(state, action) {
-      state.leftDouble = 0;
+    setReset(state) {
       state.rightDouble = 0;
       state.midleDouble = 0;
+      state.leftDouble = 0;
+      state.timeRight = "";
       state.timeLeft = "";
       state.timeMid = "";
-      state.timeRight = "";
     },
-  
   },
 });
 
@@ -50,6 +49,5 @@ export const {
   setRightDouble,
   setLeftDouble,
   setReset,
-  
 } = doubleClickSlice.actions;
 export default doubleClickSlice.reducer;

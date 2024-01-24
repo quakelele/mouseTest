@@ -5,7 +5,7 @@ import s from './Left.module.scss'
 import { IoIosClose } from "react-icons/io";
 const Left = ({ t }) => {
     const dispatch = useDispatch()
-    const { onOff, left } = useSelector(state => state.click)
+    const { theme, left } = useSelector(state => state.click)
     const { leftDouble, timeLeft } = useSelector(state => state.doubleClick)
     const [input, setInput] = React.useState('')
     const [showModal, setShowModal] = React.useState(false);
@@ -32,9 +32,9 @@ const Left = ({ t }) => {
 
 
     return (
-        <container className={s.container}>
+        <div className={s.container}>
             <div
-                className={leftDouble > 0 ? s.leftWRed : `${s.leftWDef}` && onOff ? s.leftWWhite2 : `${s.leftWWhite}`}>
+                className={leftDouble > 0 ? s.leftWRed : `${s.leftWDef}` && theme === "Light" ? s.leftWWhite2 : `${s.leftWWhite}`}>
                 <h4 >{t('Left')}: <span>{left > 0 ? left : ''}</span>  </h4>
                 <h4>{t('Double')}: <span >{leftDouble > 0 ? leftDouble : ''}</span> </h4>
                 <h4>{t('Interval')}: <span>{leftDouble > 0 ? `${timeLeft} ms` : `${""}`}</span> </h4>
@@ -57,13 +57,13 @@ const Left = ({ t }) => {
                             </div>
                         </div>)}
                     <button
-                        className={leftDouble > 0 ? s.addButton2 : `${s.addButton}` && onOff ? s.addButton3 : `${s.addButton4}`}
+                        className={leftDouble > 0 ? s.addButton2 : `${s.addButton}` && theme === "Light" ? s.addButton3 : `${s.addButton4}`}
                         onClick={handleClick} > <b>{t('setInterval')}</b>
                     </button>
                    
                 </label>
             </div >
-        </container>
+        </div>
     )
 }
 

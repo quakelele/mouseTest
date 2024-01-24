@@ -11,7 +11,7 @@ import { setTimeDoubleClickRight, setRightDouble } from '../../redux/slices/doub
 
 
 const RightButton = () => {
-    const { intervalRight, onOff } = useSelector(state => state.click)
+    const { intervalRight, theme } = useSelector(state => state.click)
     const [timeRight, setTimeRight] = useState(0);
     const { rightDouble } = useSelector(state => state.doubleClick)
     const dispatch = useDispatch()
@@ -34,7 +34,7 @@ const RightButton = () => {
     return (
         <div onContextMenu={rightClick}>
             <img className={rightDouble ? s.rightButtonR : `${s.rightButtonW}`} src={RightRed} alt="Right Button" />
-            {onOff ?
+            {theme ?
                 (<img className={s.rightButtonW} src={rightDouble ? RightRed : `${RIGHTBLACK}`} alt="Right Button" />)
                 :
                 (<img className={s.rightButtonW} src={rightDouble ? RightRed : `${RightWhite}`} alt="Right Button" />)}

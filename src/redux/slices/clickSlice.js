@@ -4,12 +4,10 @@ const initialState = {
   right: 0,
   midle: 0,
   reset: 0,
-  inputLeft: "",
   intervalLeft: 25,
   intervalRight: 25,
   intervalMidle: 25,
-  ebalstate: '',
-  onOff: false,
+  theme: "Light",
 };
 
 export const clickSlice = createSlice({
@@ -25,14 +23,14 @@ export const clickSlice = createSlice({
     setMidle(state) {
       state.midle++;
     },
-    resetAll(state,action) {
-      state.right = 0;
-      state.midle = 0;
-      state.left = 0;
-      state.input = 0;
+    resetAll(state) {
+      state.intervalRight = 0;
       state.intervalMidle = 0;
       state.intervalLeft = 0;
-      state.intervalRight = 0;
+      state.input = 0;
+      state.midle = 0;
+      state.right = 0;
+      state.left = 0;
     },
     setInputIntervalLeft(state, action) {
       if (action.payload > 0) {
@@ -52,11 +50,9 @@ export const clickSlice = createSlice({
         console.log("intervalMidle:", state.intervalMidle);
       }
     },
-    setOnOff(state) {
-      state.onOff = !state.onOff;
+    setTheme(state, action) {
+      state.theme = action.payload;
     },
-
-
   },
 });
 
@@ -65,10 +61,9 @@ export const {
   setInputIntervalMidle,
   setInputIntervalLeft,
   resetAll,
-  setOnOff,
+  setTheme,
   setMidle,
   setRight,
-  ebalayka,
   setLeft,
 } = clickSlice.actions;
 export default clickSlice.reducer;

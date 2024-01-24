@@ -3,47 +3,50 @@ import s from './Home.module.scss'
 import { Layout } from "../../components/Layout/Layout";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
-import russa from "../../img/russa.png";
+import russia from "../../img/russa.png";
 import usa from "../../img/usa.png";
 const Home = () => {
     const { t, i18n } = useTranslation();
-    const [on, setOn] = React.useState(false);
-    const [lang, setLang] = React.useState(false);
-    const { onOff } = useSelector((state) => state.click);
+    const [close, setClose] = React.useState(false);
+    const [language, setLanguage] = React.useState("false");
+    const { theme } = useSelector((state) => state.click);
+
     const changeLanguage = (language) => {
         i18n.changeLanguage(language);
     };
     const langHandler = () => {
-        setLang(!lang);
-        if (lang) {
+        setLanguage(!language);
+        if (language) {
             changeLanguage("ru");
         } else {
             changeLanguage("en");
         }
     };
+
+
     return (
         <div className={s.home}>
             <div className={s.btnFlag}>
                 <button
-                    className={onOff ? s.readmebtn2 : `${s.readmebtn}`}
-                    onClick={() => setOn(!on)}
+                    className={theme === "Light" ? s.readmebtn2 : `${s.readmebtn}`}
+                    onClick={() => setClose(!close)}
                 >
                     {t("readme")}
                 </button>
                 <img
                     onClick={langHandler}
                     className={s.russia}
-                    src={lang ? russa : `${usa}`}
+                    src={language ? russia : `${usa}`}
                     alt="Mouse"
                 />
             </div>
-            <div className={on ? s.modal : `${s.modal2}`}>
+            <div className={close ? s.modal : `${s.modal2}`}>
                 <div className={s.close}>
-                    <h2 onClick={() => setOn(!on)}>&#215;</h2>
+                    <h2 onClick={() => setClose(!close)}>&#215;</h2>
                     <img
                         onClick={langHandler}
                         className={s.russia2}
-                        src={lang ? russa : `${usa}`}
+                        src={language ? russia : `${usa}`}
                         alt="Mouse"
                     />
                 </div>
@@ -53,7 +56,7 @@ const Home = () => {
                     <p>{t("descrFaq")}</p>
                 </div>
             </div>
-            <Layout />
+            <Layout t={t}/>
         </div>
     );
 }

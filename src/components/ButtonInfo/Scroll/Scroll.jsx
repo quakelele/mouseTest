@@ -5,7 +5,7 @@ import { setInputIntervalMidle } from '../../../redux/slices/clickSlice'
 import { IoIosClose } from "react-icons/io";
 const Scroll = ({ t }) => {
     const dispatch = useDispatch()
-    const { onOff } = useSelector(state => state.click)
+    const { theme } = useSelector(state => state.click)
     const { midle } = useSelector(state => state.click)
     const { midleDouble, timeMid } = useSelector(state => state.doubleClick)
     const [input, setInput] = React.useState('')
@@ -31,8 +31,8 @@ const Scroll = ({ t }) => {
         setInput('')
     };
     return (
-        <container className={s.container}>
-            <div className={midleDouble > 0 ? s.midWRed : `${s.midWDef}` && onOff ? s.midWWhite2 : `${s.midWWhite}`}>
+        <div className={s.container}>
+            <div className={midleDouble > 0 ? s.midWRed : `${s.midWDef}` && theme === "Light" ? s.midWWhite2 : `${s.midWWhite}`}>
                 <h4 >{t('Scroll')}: <span>{midle > 0 ? midle : ''}</span>  </h4>
                 <h4>{t('Double')}: <span >{midleDouble > 0 ? midleDouble : ''}</span> </h4>
                 <h4>{t('Interval')}: <span>{midleDouble > 0 ? `${timeMid} ms` : `${""} `}</span> </h4>
@@ -43,7 +43,7 @@ const Scroll = ({ t }) => {
                         placeholder={t('def 25')}
                         onChange={(e) => setInput(e.target.value)}
                     />
-                    <button className={midleDouble > 0 ? s.addButton2 : `${s.addButton}` && onOff ? s.addButton3 : `${s.addButton4}`}
+                    <button className={midleDouble > 0 ? s.addButton2 : `${s.addButton}` && theme === "Light" ? s.addButton3 : `${s.addButton4}`}
                         onClick={handleClick} > <b>{t('setInterval')}</b> </button>
 
                     {showModal && (
@@ -57,7 +57,7 @@ const Scroll = ({ t }) => {
                     <div className={s.ebal}>  </div>
                 </label>
             </div>
-        </container>
+        </div>
 
     )
 }

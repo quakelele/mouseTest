@@ -4,24 +4,25 @@ import { MouseBody } from "../MouseBody/MouseBody"
 import { Left } from '../ButtonInfo/Left/Left'
 import { Right } from "../ButtonInfo/Right/Right"
 import { Scroll } from '../ButtonInfo/Scroll/Scroll'
-import { setOnOff } from '../../redux/slices/clickSlice'
+import { setTheme } from '../../redux/slices/clickSlice'
 import { useSelector, useDispatch } from 'react-redux'
-import { useTranslation } from "react-i18next";
-const Layout = () => {
+const Layout = ({ t }) => {
 
-    const { t, i18n } = useTranslation();
-    const { onOff } = useSelector(state => state.click)
+    const { theme } = useSelector(state => state.click)
     const dispatch = useDispatch()
- 
-    const handler = () => {
-        dispatch(setOnOff())
+
+
+    const themeChangeHandler = () => {
+        const changeTheme = theme === "Dark" ? "Light" : "Dark";
+        dispatch(setTheme(changeTheme))
+
     }
 
 
     return (
         <div className={s.wrapper}>
-            
-            <h4 className={onOff ? s.fnaticW : `${s.fnaticW2}`}>{t('title')}</h4>
+
+            <h4 className={theme === "Light" ? s.fnaticW : `${s.fnaticW2}`}>{t('title')}</h4>
             <div className={s.wrapper__inner}>
                 <Left t={t} />
                 <Scroll t={t} />
@@ -30,9 +31,9 @@ const Layout = () => {
             <div className={s.mouseBody}>
                 <MouseBody />
             </div>
-            <h4 className={onOff ? s.fnaticW : `${s.fnaticW2}`}>Fnatic Boltz</h4>
+            <h4 className={theme === "Light" ? s.fnaticW : `${s.fnaticW2}`}>Fnatic Boltz</h4>
             <div >
-                <button className={onOff ? s.textBlack : `${s.textWhite}`} onClick={handler}><b>{onOff ? t('black') : t('white')}</b></button>
+                <button className={theme === "Light" ? s.textBlack : `${s.textWhite}`} onClick={themeChangeHandler}><b>{theme === "Light" ? t('black') : t('white')}</b></button>
             </div>
         </div>
     )

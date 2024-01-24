@@ -7,7 +7,7 @@ const Right = ({ t }) => {
     const [showModal, setShowModal] = React.useState(false);
     const [input, setInput] = React.useState('')
     const { rightDouble, timeRight } = useSelector(state => state.doubleClick)
-    const { right, onOff } = useSelector(state => state.click)
+    const { right, theme } = useSelector(state => state.click)
     const dispatch = useDispatch()
 
     const handleClick = () => {
@@ -32,8 +32,8 @@ const Right = ({ t }) => {
 
 
     return (
-        <container className={s.container} >
-            <div className={rightDouble > 0 ? s.rightWRed : `${s.rightWDef}` && onOff ? s.rightWWhite2 : `${s.rightWWhite}`}>
+        <div className={s.container} >
+            <div className={rightDouble > 0 ? s.rightWRed : `${s.rightWDef}` && theme === "Light" ? s.rightWWhite2 : `${s.rightWWhite}`}>
                 <h4 >{t('Right')}: <span>{right > 0 ? right : ''}</span>  </h4>
                 <h4>{t('Double')}: <span >{rightDouble > 0 ? rightDouble : ''}</span> </h4>
                 <h4>{t('Interval')}: <span>{rightDouble > 0 ? `${timeRight} ms` : `${""}`}</span> </h4>
@@ -56,13 +56,13 @@ const Right = ({ t }) => {
                             </div>
                         </div>)}
                     <button
-                        className={rightDouble > 0 ? s.addButton2 : `${s.addButton}` && onOff ? s.addButton3 : `${s.addButton4}`}
+                        className={rightDouble > 0 ? s.addButton2 : `${s.addButton}` && theme === "Light" ? s.addButton3 : `${s.addButton4}`}
                         onClick={handleClick} > <b>{t('setInterval')}</b>
                     </button>
                    
                 </label>
             </div>
-        </container>
+        </div>
 
     )
 }

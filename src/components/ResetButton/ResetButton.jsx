@@ -7,7 +7,7 @@ import {  resetAll, setInputIntervalMidle } from '../../redux/slices/clickSlice'
 import { setReset, setTimeDoubleClickLeft,  } from '../../redux/slices/doubleClickSlice'
 
 const ResetButton = () => {
-    const { onOff } = useSelector(state => state.click)
+    const { theme } = useSelector(state => state.click)
     const dispatch = useDispatch()
     const setResetAll = () => {
         dispatch(setReset())
@@ -17,7 +17,7 @@ const ResetButton = () => {
     }
     return (
         <div onClick={setResetAll}>
-            <img className={s.resetButton} src={onOff ? ResetB : `${Reset}`} alt="Reset Button" />
+            <img className={s.resetButton} src={theme === "Light" ? ResetB : `${Reset}`} alt="Reset Button" />
         </div>
     )
 }
