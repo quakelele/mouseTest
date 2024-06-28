@@ -1,121 +1,86 @@
 @mixin fluid-text($min: 1, $max: 35) {
-  font-size: clamp(#{$min}px, #{$max / 1920 * 100}vw, #{$max}px);
+   font-size: clamp(#{$min}px, #{$max / 1920 * 100}vw, #{$max}px);
 }
-@mixin modul-window {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  align-items: center;
-  width: 75%;
-  height: 100%;
-  border-radius: 20px;
-  border: 1px solid white;
-  background-color: rgba(0, 0, 0, 0.5); /* Цвет и прозрачность фона */
-  backdrop-filter: blur(15px);
-  z-index: 255;
-  .fade-in {
-    opacity: 0.5;
-    transition: opacity 0.5s ease;
-  }
-  .fade-in:hover {
-    opacity: 1;
-  }
-}
-@mixin read-me-btn {
-  margin-bottom: 30px;
-  font-weight: 700;
-  width: 120px;
-  border-radius: 5px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-.home {
-  text-align: center;
-  align-items: center;
-}
-.modal {
-  @include modul-window;
-}
-.modal2 {
-  @include modul-window;
-  display: none;
+@mixin textBW {
+   @include fluid-text(12, 13);
+   margin-top: 2px;
+   z-index: 255;
 }
 
-.titles {
-  margin-top: 30px;
-  color: white;
-  @include fluid-text(10, 35);
-  z-index: 300;
-  padding: 50px;
-}
-.close {
-  cursor: pointer;
-  h2 {
-    right: 35px;
-    top: 0;
-    position: absolute;
-    color: white;
-    font-size: 25px;
-  }
-  .russia2 {
-    text-align: center;
-    align-items: center;
-    display: inline-block;
-    cursor: pointer;
-    width: 25px;
-    right: 35px;
-    top: 55px;
-    position: absolute;
-    height: 18px;
-    margin-left: 10px;
-  }
+@mixin langButton {
+   margin: 0 auto;
+   cursor: pointer;
+   font-size: 10px;
+   width: 70px;
+   border-radius: 5px;
+   font-weight: 700;
+   padding: 5px;
 }
 
-.readmebtn {
-  @include read-me-btn;
-  background-color: var(--color-dark);
-  color: white;
-  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
+.wrapper {
+   text-align: center;
+   align-items: center;
+   margin: 0 auto;
+   text-align: center;
+   .wrapper__inner {
+      margin-top: 50px;
+      justify-content: center;
+      display: flex;
+      flex-direction: row;
+   }
 }
 
-.readmebtn2 {
-  @include read-me-btn;
-  background-color: var(--color-light);
-  color: black;
-  box-shadow: 0 11px 11px rgba(255, 255, 255, 0.4);
+.mouseBody {
+   width: 40vw;
+   height: auto;
+   margin: 0 auto;
 }
 
-.readmebtn3 {
-  @include read-me-btn;
-  background-color: var(--color-light);
-  margin-bottom: 10px;
-  color: black;
+.fnaticW {
+   margin-bottom: 5px;
+   @include fluid-text(12, 19);
+   color: white;
+   text-shadow: 2px 3px 4px rgba(255, 255, 255, 0.5);
+}
+.active {
+   @include fluid-text(12, 19);
+   color: black;
+   margin-bottom: 5px;
+}
+button {
+   width: 65px;
+   height: 25px;
+   background-color: rgb(185, 185, 185);
+   color: white;
+   border-radius: 3px;
+   border: none;
+   cursor: pointer;
 }
 
-.readmebtn4 {
-  @include read-me-btn;
-  background-color: var(--color-light);
-  color: black;
+.textBlack {
+   @include textBW;
+   color: black;
+   background-color: rgba(255, 255, 255, 1);
+   box-shadow: 0 11px 11px rgba(255, 255, 255, 0.4);
 }
 
-.russia {
-  margin-top: 24px;
-  text-align: center;
-  align-items: center;
-  display: inline-block;
-  cursor: pointer;
-  width: 25px;
-  height: 20px;
-  color: white;
-  margin-left: 10px;
-
+.textWhite {
+   @include textBW;
+   color: white;
+   box-shadow: 0 4px 8px rgba(1, 0, 0, 0.4);
+   background-color: rgb(37, 37, 37);
 }
 
-.btnFlag {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
+.btnOfLang {
+   @include fluid-text(3, 11);
+   @include langButton;
+   color: white;
+   background-color: rgb(57, 62, 64);
 }
 
+.btnOfLang2 {
+   @include fluid-text(3, 11);
+   @include langButton;
+   color: black;
+   background-color: white;
+}

@@ -1,0 +1,119 @@
+@mixin fluid-text($min: 1, $max: 35) {
+   font-size: clamp(#{$min}px, #{$max / 1920 * 100}vw, #{$max}px);
+}
+@mixin modul-window {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   align-items: center;
+   width: 75%;
+   height: 100%;
+   border-radius: 20px;
+   border: 1px solid white;
+   background-color: rgba(0, 0, 0, 0.5); /* Цвет и прозрачность фона */
+   backdrop-filter: blur(15px);
+   z-index: 255;
+   .fade-in {
+      opacity: 0.5;
+      transition: opacity 0.5s ease;
+   }
+   .fade-in:hover {
+      opacity: 1;
+   }
+}
+@mixin read-me-btn {
+   margin-bottom: 30px;
+   font-weight: 700;
+   width: 120px;
+   border-radius: 5px;
+   margin-top: 20px;
+   margin-bottom: 10px;
+}
+.wrapper {
+   text-align: center;
+   align-items: center;
+}
+.modal {
+   @include modul-window;
+}
+.modal2 {
+   @include modul-window;
+   display: none;
+}
+
+.titles {
+   margin-top: 30px;
+   color: white;
+   @include fluid-text(10, 35);
+   z-index: 300;
+   padding: 50px;
+}
+.close {
+   cursor: pointer;
+   h2 {
+      right: 35px;
+      top: 0;
+      position: absolute;
+      color: white;
+      font-size: 25px;
+   }
+   .russia2 {
+      text-align: center;
+      align-items: center;
+      display: inline-block;
+      cursor: pointer;
+      width: 25px;
+      right: 35px;
+      top: 55px;
+      position: absolute;
+      height: 18px;
+      margin-left: 10px;
+   }
+}
+
+.readmebtn {
+   @include read-me-btn;
+   background-color: var(--color-dark);
+   color: white;
+   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+.readmebtn2 {
+   @include read-me-btn;
+   background-color: var(--color-light);
+   color: black;
+   box-shadow: 0 11px 11px rgba(255, 255, 255, 0.4);
+}
+
+.readmebtn3 {
+   @include read-me-btn;
+   background-color: var(--color-light);
+   margin-bottom: 10px;
+   color: black;
+}
+
+.readmebtn4 {
+   @include read-me-btn;
+   background-color: var(--color-light);
+   color: black;
+}
+
+.russia {
+   margin-top: 24px;
+   text-align: center;
+   align-items: center;
+   display: inline-block;
+   cursor: pointer;
+   width: 25px;
+   height: 20px;
+   color: white;
+   margin-left: 10px;
+}
+
+.btnFlag {
+   display: flex;
+   justify-content: center;
+   flex-direction: row;
+}

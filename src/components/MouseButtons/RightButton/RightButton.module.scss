@@ -1,0 +1,31 @@
+.rightButtonR {
+   position: absolute;
+   top: 21.5%;
+   left: 70.5%;
+   transform: translate(-50%, -50%);
+   width: 43%; /* Пример ширины кнопки (установите подходящее значение) */
+   height: auto;
+   opacity: 0.5;
+   cursor: pointer;
+   transition: opacity 0.5s ease; /* добавляем анимацию перехода для свойства opacity */
+}
+
+.rightButtonR:active {
+   opacity: 1; /* устанавливаем новое значение прозрачности при активации (нажатии) */
+}
+
+.rightButtonW {
+   position: absolute;
+   top: 21.5%;
+   left: 70.5%;
+   transform: translate(-50%, -50%);
+   width: 43%; /* Пример ширины кнопки (установите подходящее значение) */
+   height: auto;
+   opacity: 0;
+   cursor: pointer;
+   transition: opacity 0.3s ease; /* добавляем анимацию перехода для свойства opacity */
+}
+
+.rightButtonW:active {
+   opacity: 1; /* устанавливаем новое значение прозрачности при активации (нажатии) */
+}

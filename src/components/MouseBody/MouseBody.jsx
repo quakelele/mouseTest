@@ -1,27 +1,26 @@
-import React from 'react'
-import s from './MouseBody.module.scss'
-import LeftButton from '../LeftButton/LeftButton'
-import { RightButton } from '../RightButton/RightButton'
-import { ScrollButton } from '../ScrollButton/ScrollButton'
-import { ResetButton } from '../ResetButton/ResetButton'
-import bodyFnatic from "../../img/bodyFnatic.png"
-import bodyFnaticW from "../../img/bodyFnaticW.png"
+import { ScrollButton } from '../MouseButtons/ScrollButton/ScrollButton'
+import { RightButton } from '../MouseButtons/RightButton/RightButton'
+import { ResetButton } from '../MouseButtons/ResetButton/ResetButton'
+import { LeftButton } from '../MouseButtons/LeftButton/LeftButton'
 import { useSelector } from 'react-redux'
+import bodyFnatic from '../../assets/bodyFnatic.png'
+import bodyFnaticW from '../../assets/bodyFnaticW.png'
+import s from './MouseBody.module.scss'
 
-const MouseBody = () => {
-    const { theme } = useSelector(state => state.click)
+export const MouseBody = () => {
+   const { theme } = useSelector(state => state.click)
 
-    return (
-
-            <div className={s.mouseContainer}>
-                <img className={s.mouse} src={theme === "Light" ? bodyFnaticW : bodyFnatic} alt="Mouse" />
-                <LeftButton />
-                <RightButton />
-                <ScrollButton />
-                <ResetButton />
-
-            </div>
-    )
+   return (
+      <div className={s.wrapper}>
+         <img
+            className={s.mouse}
+            src={theme === 'Light' ? bodyFnaticW : bodyFnatic}
+            alt="Mouse"
+         />
+         <LeftButton />
+         <RightButton />
+         <ScrollButton />
+         <ResetButton />
+      </div>
+   )
 }
-
-export { MouseBody }

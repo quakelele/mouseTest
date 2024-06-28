@@ -1,0 +1,30 @@
+.midButtonR {
+   position: absolute;
+   top: 21.6%;
+   left: 50.3%;
+   transform: translate(-50%, -50%);
+   width: 15%; /* Пример ширины кнопки (установите подходящее значение) */
+   height: auto;
+   opacity: 0.8;
+   cursor: pointer;
+   transition: opacity 0.5s ease; /* добавляем анимацию перехода для свойства opacity */
+}
+
+.midButtonR:active {
+   opacity: 1; /* устанавливаем новое значение прозрачности при активации (нажатии) */
+}
+.midButtonW {
+   position: absolute;
+   top: 21.6%;
+   left: 50.3%;
+   transform: translate(-50%, -50%);
+   width: 15%; /* Пример ширины кнопки (установите подходящее значение) */
+   height: auto;
+   opacity: 0;
+   cursor: pointer;
+   transition: opacity 0.3s ease; /* добавляем анимацию перехода для свойства opacity */
+}
+
+.midButtonW:active {
+   opacity: 1; /* устанавливаем новое значение прозрачности при активации (нажатии) */
+}

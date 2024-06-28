@@ -1,24 +1,24 @@
-.mouseContainer {
-  position: relative;
-  display: inline-block;
-  max-width: 210px;
-  height: auto;
-  margin-bottom: 15px;
+.wrapper {
+   position: relative;
+   display: inline-block;
+   max-width: 210px;
+   height: auto;
+   margin-bottom: 15px;
 
-  .mouse {
-    width: 100%;
-    height: auto;
-  }
+   .mouse {
+      width: 100%;
+      height: auto;
+   }
 
-  .mouse2 {
-    left: 0px;
-    position: absolute;
-    width: 100%;
-    height: auto;
-  }
+   .mouse2 {
+      left: 0px;
+      position: absolute;
+      width: 100%;
+      height: auto;
+   }
 
-  .flexB {
-    display: flex;
-    flex-direction: row;
-  }
+   .flexB {
+      display: flex;
+      flex-direction: row;
+   }
 }
