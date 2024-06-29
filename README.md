@@ -8,13 +8,11 @@
 <p>React JS, React i18next, Redux Toolkit, SCSS</p>
 
 <h3>Для запуска проекта:</h2>
+git clone https://github.com/quakelele/mouseTest.git
 <p>npm install, npm start</p>
 
 <h3>Можно затестить тут:</h3>
-https://mouse-test.vercel.app/
-
-<h3>Клонирование: </h2>
-git clone https://github.com/quakelele/mouseTest.git
+<p>https://mouse-test.vercel.app/</p>
 <br>
 
 ![image](https://github.com/quakelele/mouseTest/assets/154896596/2421b2b6-821a-45b3-bb85-eaa79bbfa99e)
